@@ -14,9 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.3"
-  },
   "bugs": {
     "url": "https://github.com/MrSumada/zookeepr/issues"
   },
