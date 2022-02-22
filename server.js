@@ -1,20 +1,8 @@
 const express = require("express");
-const PORT = process.env.PORT || 80;
-const app = express();
 const { animals } = require("./data/animals.json");
 
-
-app.get("/api/animals", (req, res) => {
-    let results = animals;
-    if (req.query) {
-        results = filterByQuery(req.query, results);
-    }
-    res.json(results);
-});
-
-app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}!`);
-});
+const PORT = process.env.PORT || 443;
+const app = express();
 
 function filterByQuery(query, animalsArray) {
 
@@ -50,3 +38,18 @@ function filterByQuery(query, animalsArray) {
 
     return filteredResults;
 }
+
+
+
+app.get('/api/animals', (req, res) => {
+    let results = animals;
+    if (req.query) {
+        results = filterByQuery(req.query, results);
+    }
+    res.json(results);
+});
+
+app.listen(443, () => {
+    console.log(`API server now on port ${PORT}!`);
+});
+
