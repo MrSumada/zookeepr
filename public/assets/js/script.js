@@ -1,3 +1,5 @@
+const { query } = require("express");
+
 const $animalForm = document.querySelector('#animal-form');
 
 const handleAnimalFormSubmit = event => {
